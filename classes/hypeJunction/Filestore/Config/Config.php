@@ -139,6 +139,7 @@ class Config {
 	 */
 	public function getGlobalIconSizes() {
 		return elgg_get_config('icon_sizes');
+		return function_exists("elgg_get_icon_sizes") ? elgg_get_icon_sizes('object') : elgg_get_config('icon_sizes');
 	}
 
 	/**
